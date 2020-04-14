@@ -10,7 +10,6 @@ modelnames =  networks.__all__
 datasetNames = ('Vimeo_90K_interp') #datasets.__all__
 
 parser = argparse.ArgumentParser(description='DAIN')
-parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", default="DAIN")
 parser.add_argument('--debug',action = 'store_true', help='Enable debug mode')
 parser.add_argument('--netName', type=str, default='DAIN',
                     choices = modelnames,help = 'model architecture: ' +
@@ -101,7 +100,7 @@ parser.add_argument('--save_path',default=save_path,help = 'the output dir of we
 parser.add_argument('--log', default = save_path+'/log.txt', help = 'the log file in training')
 parser.add_argument('--arg', default = save_path+'/args.txt', help = 'the args used')
 
-args = parser.parse_args()
+args = parser.parse_args(args=[])
 
 
 with open(args.log, 'w') as f:
