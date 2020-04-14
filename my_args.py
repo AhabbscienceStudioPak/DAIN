@@ -66,7 +66,7 @@ parser.add_argument('--dtype', default=torch.cuda.FloatTensor, choices = [torch.
 parser.add_argument('--uid', type=str, default= None, help='unique id for the training')
 parser.add_argument('--force', action='store_true', help='force to override the given uid')
 
-args = parser.parse_args()
+args, unknown = parser.parse_known_args()
 
 import shutil
 
