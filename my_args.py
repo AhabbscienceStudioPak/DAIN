@@ -100,7 +100,7 @@ parser.add_argument('--save_path',default=save_path,help = 'the output dir of we
 parser.add_argument('--log', default = save_path+'/log.txt', help = 'the log file in training')
 parser.add_argument('--arg', default = save_path+'/args.txt', help = 'the args used')
 
-args, unknown = parser.parse_known_args()
+args = parser.parse_args()
 
 
 with open(args.log, 'w') as f:
